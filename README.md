@@ -19,6 +19,7 @@ Get these tasks done by 12/05 and from there add extras
 * ~~Create a scater plot of petal length x sepal length~~
 * ~~Create a scatter plot of petal width x sepal width~~
 * ~~Create a scatter plot of petal width x sepal length~~
+* Convert these plots to seaborn, so they can be viewed together with the different species seperated by colour
 
 
 ## Sources
@@ -29,3 +30,9 @@ https://github.com/mwaskom/seaborn-data/blob/master/iris.csv
 Ian's lecture notes as a source
 
 https://www.projectpro.io/recipes/write-text-file-output-of-for-loop
+
+https://www.geeksforgeeks.org/exploratory-data-analysis-on-iris-dataset/ --> V good source
+
+https://github.com/abhikumar22/Exploratory-Data-Analysis-on-IRIS-Dataset/blob/master/EDA_Flower.ipynb
+
+https://www.youtube.com/watch?v=02BFXhPQWHQ --> Vid of anaylsis that doesn't use seaborn
