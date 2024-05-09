@@ -89,7 +89,7 @@ plt.gca().spines['right'].set_visible(False) #remove line on right
 plt.show()
 '''
 
-
+'''
 # get the petal + sepal length and width from the data and name them as variables
 plen = df['petal_length']
 pwidth = df['petal_width']
@@ -196,5 +196,19 @@ ax.grid(True, linestyle='--', alpha=0.7) #add graph lines
 ax.tick_params(axis='x',labelsize=10)
 ax.tick_params(axis='y',labelsize=10)
 fig.tight_layout()
+'''
 
-plt.show()
+#output a summary of each variable to a single text file 
+# Use  pandas . describe()
+#To put all of them into the same file I should use a loop
+
+#create a text file to write the summaries into
+with open("variable_summary.txt", "w") as file:
+
+  #Use for loop to iterate over each column and write their description into a text file
+  for column in df.columns:
+        file.write(f"Summary for {column}:\n")
+        file.write(str(df[column].describe()) + "\n\n") 
+#If run multiple times this will overwrite what is already written in the file rather than create duplicates of files
+
+  
