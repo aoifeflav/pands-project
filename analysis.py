@@ -12,6 +12,9 @@ import numpy as np
 #plotting
 import matplotlib.pyplot as plt
 
+#aesthetic plotting
+import seaborn as sns
+
 # Load the dataset
 df = pd.read_csv("iris.csv")
 
@@ -198,6 +201,7 @@ ax.tick_params(axis='y',labelsize=10)
 fig.tight_layout()
 '''
 
+'''
 #output a summary of each variable to a single text file 
 # Use  pandas . describe()
 #To put all of them into the same file I should use a loop
@@ -210,5 +214,30 @@ with open("variable_summary.txt", "w") as file:
         file.write(f"Summary for {column}:\n")
         file.write(str(df[column].describe()) + "\n\n") 
 #If run multiple times this will overwrite what is already written in the file rather than create duplicates of files
+'''
 
-  
+#Create a boxplot of the three species and their distribution
+#Exclude species
+numerical_variables = df.columns[:-1]
+
+# Set up plotting layout
+plt.figure(figsize=(15, 5))
+
+# Create boxplots
+species = ['versicolor', 'setosa', 'virginica']
+colors = ['#FF5733', '#33FF57', '#337AFF'] 
+for i,  specie in enumerate(species, start=1):
+    plt.subplot(1, 3, i)
+    plt.boxplot([df[df['species'] == specie][col] for col in numerical_variables],
+                patch_artist=True,  #Enable filled boxplots
+                boxprops=dict(facecolor=colors[i - 1]),  #box colour
+                whiskerprops=dict(color='black'),  #whiskers colour
+                capprops=dict(color='black'),  #caps colour
+                medianprops=dict(color='black'),  #median line colour
+                meanprops=dict(marker='o', markerfacecolor='black', markeredgecolor='black')  # Set style of mean marker
+                )
+    plt.xticks(range(1, len(numerical_variables) + 1), numerical_variables, rotation=45)
+    plt.title(specie)
+
+plt.tight_layout()
+plt.show()

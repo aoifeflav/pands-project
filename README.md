@@ -8,14 +8,21 @@ The Iris dataset is a very commonly used dataset in the world of data science. I
 
 The data set has 50 samples of three different species of Iris; Iris Setosa, Iris Virginica and Iris Versicolor.
 
+![Plot Image](iris_species.jpeg)
+
+Source: Kaggle
+
+
 The dataset contains five columns:
-* sepal length
-* sepal width
-* petal length
-* petal width
-* species
+* Sepal Length 
+* Sepal Width
+* Petal Length
+* Petal Width
+* Species
 
+![Plot Image](petal_and_sepal_dimensions.jpeg)
 
+Source: Kaggle
 
 
 
@@ -26,7 +33,6 @@ Get these tasks done by 12/05 and from there add extras
 * ~~create repository~~
 * Write a summary of the dataset in the readme
 * ~~Download dataset & add to repository (done in Ian's lectures)~~
-* Write a summary of each variable
 * ~~have analysis.py output a summary of each variable to a single text file (extracting the result of pandas . describe() of each variable to a txt file.)~~ (Need to test)
 * ~~Create a histrgram of sepal length~~
 * ~~Create a histrgram of sepal width~~
@@ -39,8 +45,14 @@ Get these tasks done by 12/05 and from there add extras
 * ~~Create a scater plot of petal length x sepal length~~
 * ~~Create a scatter plot of petal width x sepal width~~
 * ~~Create a scatter plot of petal width x sepal length~~
+### Improved Project plan
+Aim to complete by 19/20 so there is time for final touches
 * Convert these plots to seaborn, so they can be viewed together with the different species seperated by colour
-
+* ~~Add a boxplot~~ chage colours to purple and explain it's significance
+* Do some distplots (check the geek4geek source for how to do)
+* Add in some mathematical bits about correlation
+* Use heatmaps to explai correlation (use geeks4geeks source)
+* Insert all of the images of the plots created into the readme with a clear narrative
 
 ## Sources
 https://en.wikipedia.org/wiki/Iris_flower_data_set#:~:text=The%20Iris%20flower%20data%20set,example%20of%20linear%20discriminant%20analysis.
@@ -56,3 +68,9 @@ https://www.geeksforgeeks.org/exploratory-data-analysis-on-iris-dataset/ --> V g
 https://github.com/abhikumar22/Exploratory-Data-Analysis-on-IRIS-Dataset/blob/master/EDA_Flower.ipynb
 
 https://www.youtube.com/watch?v=02BFXhPQWHQ --> Vid of anaylsis that doesn't use seaborn
+
+https://www.kaggle.com/datasets/uciml/iris
+
+https://towardsdatascience.com/create-and-customize-boxplots-with-pythons-matplotlib-to-get-lots-of-insights-from-your-data-d561c9883643 --> Boxplots
+
+
