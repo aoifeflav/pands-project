@@ -1,4 +1,24 @@
-# pands-project
+# Iris Dataset Analysis
+### by Aoife Flavin 
+---
+This repository contains my analysis of the Iris dataset. The purpose of this repoitory is for my final project in the module Programming and Scripting, in Semester 1 of the Higher Diploma in Data Analytics at ATU.
+---
+## About the Iris dataset
+The Iris dataset is a very commonly used dataset in the world of data science. It has been called the "Hello World of data science. The data is also sometimes known as  Fisher's Iris data set, after the biologist and statistician Ronald Fisher used it in his who used it in his 1936 paper 'The use of multiple measurements in taxonomic problems'.
+
+The data set has 50 samples of three different species of Iris; Iris Setosa, Iris Virginica and Iris Versicolor.
+
+The dataset contains five columns:
+* sepal length
+* sepal width
+* petal length
+* petal width
+* species
+
+
+
+
+
 
 
 ### MVP Project plan
