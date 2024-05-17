@@ -49,7 +49,7 @@ Get these tasks done by 12/05 and from there add extras
 * ~~Create a scatter plot of petal width x sepal length~~
 ### Improved Project plan
 Aim to complete by 19/20 so there is time for final touches
-* Convert these plots to seaborn, so they can be viewed together with the different species seperated by colour
+* ~~Convert these plots to seaborn, so they can be viewed together with the different species seperated by~~ colour
 * ~~Add a boxplot chage colours to purple and explain it's significance#~~
 * Do some distplots (check the geek4geek source for how to do)
 * Add in some mathematical bits about correlation
@@ -75,4 +75,5 @@ https://www.kaggle.com/datasets/uciml/iris
 
 https://towardsdatascience.com/create-and-customize-boxplots-with-pythons-matplotlib-to-get-lots-of-insights-from-your-data-d561c9883643 --> Boxplots
 
+https://www.simplypsychology.org/boxplots.html
 

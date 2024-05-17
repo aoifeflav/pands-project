@@ -275,5 +275,14 @@ graph('petal_width')
 #Species Virginica has the highest features
 '''
 
+'''
+#The following plot just puts all of these together to be looked at side by side
+sns.pairplot(df, hue='species', height=2)
+
+plt.tight_layout()
+plt.show()
+'''
+
+
 
 
