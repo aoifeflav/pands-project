@@ -215,7 +215,7 @@ with open("variable_summary.txt", "w") as file:
         file.write(str(df[column].describe()) + "\n\n") 
 #If run multiple times this will overwrite what is already written in the file rather than create duplicates of files
 '''
-
+'''
 #Create a boxplot of the three species and their distribution
 #Exclude species
 numerical_variables = df.columns[:-1]
@@ -225,7 +225,7 @@ plt.figure(figsize=(15, 5))
 
 # Create boxplots
 species = ['versicolor', 'setosa', 'virginica']
-colors = ['#FF5733', '#33FF57', '#337AFF'] 
+colors = ['#2c041c', '#e39ff6', '#710193'] 
 for i,  specie in enumerate(species, start=1):
     plt.subplot(1, 3, i)
     plt.boxplot([df[df['species'] == specie][col] for col in numerical_variables],
@@ -241,3 +241,39 @@ for i,  specie in enumerate(species, start=1):
 
 plt.tight_layout()
 plt.show()
+#This plot visually demonstrates that for both the virginica and versicolor species, there's a tendency towards longer lengths and 
+#narrower widths for both the petal and sepal. However, in the case of the setosa species, we observe a distinct pattern: its petals are 
+#not only long but also wide, while the sepals are notably shorter in both width and length compared to the other species.
+#Furthermore, it can be observed that there is less variation in the sepal size of the setosa, than of the other species
+#The setosa also has the highest number of outliers of any of the species, demonstrated by the Os located outside the whiskers of the box plot.
+'''
+
+'''
+#define as a function
+def graph(y): 
+    colours = ['#e39ff6', '#2c041c', '#710193'] 
+    sns.boxplot(x="species", y=y, data=df, palette=colours, flierprops=dict(marker='o', markersize=8, markerfacecolor='red', markeredgecolor='black'))
+  
+plt.figure(figsize=(10,10)) 
+      
+# Adding the subplot at the specified 
+# grid position 
+plt.subplot(221) 
+graph('sepal_length') 
+  
+plt.subplot(222) 
+graph('sepal_width') 
+  
+plt.subplot(223) 
+graph('petal_length') 
+  
+plt.subplot(224) 
+graph('petal_width') 
+  
+#(reword)Species Setosa has the smallest features and less distributed with some outliers.
+#Species Versicolor has the average features.
+#Species Virginica has the highest features
+'''
+
+
+

@@ -4,7 +4,7 @@
 This repository contains my analysis of the Iris dataset. The purpose of this repoitory is for my final project in the module Programming and Scripting, in Semester 1 of the Higher Diploma in Data Analytics at ATU.
 ---
 ## About the Iris dataset
-The Iris dataset is a very commonly used dataset in the world of data science. It has been called the "Hello World of data science. The data is also sometimes known as  Fisher's Iris data set, after the biologist and statistician Ronald Fisher used it in his who used it in his 1936 paper 'The use of multiple measurements in taxonomic problems'.
+The Iris dataset is a very commonly used dataset in the world of data science. It has been called the "Hello World of data science". The data is also sometimes known as  Fisher's Iris data set, after the biologist and statistician Ronald Fisher used it in his who used it in his 1936 paper 'The use of multiple measurements in taxonomic problems'.
 
 The data set has 50 samples of three different species of Iris; Iris Setosa, Iris Virginica and Iris Versicolor.
 
@@ -19,6 +19,8 @@ The dataset contains five columns:
 * Petal Length
 * Petal Width
 * Species
+
+The following image displays the difference between the petal and the sepal in an Iris flower.
 
 ![Plot Image](petal_and_sepal_dimensions.jpeg)
 
@@ -48,7 +50,7 @@ Get these tasks done by 12/05 and from there add extras
 ### Improved Project plan
 Aim to complete by 19/20 so there is time for final touches
 * Convert these plots to seaborn, so they can be viewed together with the different species seperated by colour
-* ~~Add a boxplot~~ chage colours to purple and explain it's significance
+* ~~Add a boxplot chage colours to purple and explain it's significance#~~
 * Do some distplots (check the geek4geek source for how to do)
 * Add in some mathematical bits about correlation
 * Use heatmaps to explai correlation (use geeks4geeks source)
