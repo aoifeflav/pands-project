@@ -92,7 +92,7 @@ plt.gca().spines['right'].set_visible(False) #remove line on right
 plt.show()
 '''
 
-'''
+
 # get the petal + sepal length and width from the data and name them as variables
 plen = df['petal_length']
 pwidth = df['petal_width']
@@ -101,105 +101,86 @@ swidth = df['sepal_width']
 
 #1 Plot petal length vs petal width
 
-#Use the stateful approach
-fig, ax = plt.subplots(figsize=(10,6))
+custom_colors=["#e39ff6", "#2c041c", "#710193"]
 
-#plot it and make it pretty
-ax.scatter(plen, pwidth, color='orange', alpha=0.6, s=80, edgecolor='black')
-ax.set_xlabel('Petal Length', fontsize=12)
-ax.set_ylabel('Petal Width', fontsize=12)
-ax.set_title('Petal Length vs Petal Width', fontsize=14)
-ax.grid(True, linestyle='--', alpha=0.7) #add graph lines
-ax.tick_params(axis='x',labelsize=10)
-ax.tick_params(axis='y',labelsize=10)
-fig.tight_layout()
+#create plot
+sns.scatterplot(x=plen, y=pwidth, hue="species", palette= custom_colors, alpha=0.7, data=df)
 
+# Add labels and title
+plt.xlabel("Petal Length (cm)")
+plt.ylabel("Petal Width (cm)")
+plt.title("Petal Length vs Petal Width")
+plt.grid(True)
+plt.legend()
 
-
+plt.show()
 
 #2 Plot petal length vs sepal length
 
-#Use the stateful approach
-fig, ax = plt.subplots(figsize=(10,6))
+#create plot
+sns.scatterplot(x=plen, y=slen, hue="species", palette= custom_colors, alpha=0.7, data=df)
 
-#plot it and make it pretty
-ax.scatter(plen, slen, color='orange', alpha=0.6, s=80, edgecolor='black')
-ax.set_xlabel('Petal Length', fontsize=12)
-ax.set_ylabel('Sepal Length', fontsize=12)
-ax.set_title('Petal Length vs Sepal Length', fontsize=14)
-ax.grid(True, linestyle='--', alpha=0.7) #add graph lines
-ax.tick_params(axis='x',labelsize=10)
-ax.tick_params(axis='y',labelsize=10)
-fig.tight_layout()
+# Add labels and title
+plt.xlabel("Petal Length (cm)")
+plt.ylabel("Sepal Length (cm)")
+plt.title("Petal Length vs Sepal Length")
+plt.grid(True)
+plt.legend()
 
-
+plt.show()
 
 #3 Plot petal length vs sepal width
+#create plot
+sns.scatterplot(x=plen, y=swidth, hue="species", palette= custom_colors, alpha=0.7, data=df)
 
-#Use the stateful approach
-fig, ax = plt.subplots(figsize=(10,6))
+# Add labels and title
+plt.xlabel("Petal Length (cm)")
+plt.ylabel("Sepal Width (cm)")
+plt.title("Petal Length vs Sepal Width")
+plt.grid(True)
+plt.legend()
 
-#plot it and make it pretty
-ax.scatter(plen, swidth, color='orange', alpha=0.6, s=80, edgecolor='black')
-ax.set_xlabel('Petal Length', fontsize=12)
-ax.set_ylabel('Sepal Width', fontsize=12)
-ax.set_title('Petal Length vs Sepal Width', fontsize=14)
-ax.grid(True, linestyle='--', alpha=0.7) #add graph lines
-ax.tick_params(axis='x',labelsize=10)
-ax.tick_params(axis='y',labelsize=10)
-fig.tight_layout()
-
-
+plt.show()
 
 #4 Plot petal width vs sepal length
+#create plot
+sns.scatterplot(x=pwidth, y=slen, hue="species", palette= custom_colors, alpha=0.7, data=df)
 
-#Use the stateful approach
-fig, ax = plt.subplots(figsize=(10,6))
+# Add labels and title
+plt.xlabel("Petal Width (cm)")
+plt.ylabel("Sepal Length (cm)")
+plt.title("Petal Width vs Sepal Length")
+plt.grid(True)
+plt.legend()
 
-#plot it and make it pretty
-ax.scatter(pwidth, slen, color='orange', alpha=0.6, s=80, edgecolor='black')
-ax.set_xlabel('Petal Width', fontsize=12)
-ax.set_ylabel('Sepal Length', fontsize=12)
-ax.set_title('Petal Width vs Sepal Length', fontsize=14)
-ax.grid(True, linestyle='--', alpha=0.7) #add graph lines
-ax.tick_params(axis='x',labelsize=10)
-ax.tick_params(axis='y',labelsize=10)
-fig.tight_layout()
-
-
+plt.show()
 
 #5 Plot petal width vs sepal width
+#create plot
+sns.scatterplot(x=pwidth, y=swidth, hue="species", palette= custom_colors, alpha=0.7, data=df)
 
-#Use the stateful approach
-fig, ax = plt.subplots(figsize=(10,6))
+# Add labels and title
+plt.xlabel("Petal Width (cm)")
+plt.ylabel("Sepal Width (cm)")
+plt.title("Petal Width vs Sepal Width")
+plt.grid(True)
+plt.legend()
 
-#plot it and make it pretty
-ax.scatter(pwidth, swidth, color='orange', alpha=0.6, s=80, edgecolor='black')
-ax.set_xlabel('Petal Width', fontsize=12)
-ax.set_ylabel('Sepal Width', fontsize=12)
-ax.set_title('Petal Width vs Sepal Width', fontsize=14)
-ax.grid(True, linestyle='--', alpha=0.7) #add graph lines
-ax.tick_params(axis='x',labelsize=10)
-ax.tick_params(axis='y',labelsize=10)
-fig.tight_layout()
-
-
+plt.show()
 
 #6 Plot sepal length vs sepal width
+#create plot
+sns.scatterplot(x=slen, y=swidth, hue="species", palette= custom_colors, alpha=0.7, data=df)
 
-#Use the stateful approach
-fig, ax = plt.subplots(figsize=(10,6))
+# Add labels and title
+plt.xlabel("Sepal Length (cm)")
+plt.ylabel("Sepal Width (cm)")
+plt.title("Sepal Length vs Sepal Width")
+plt.grid(True)
+plt.legend()
 
-#plot it and make it pretty
-ax.scatter(slen, swidth, color='orange', alpha=0.6, s=80, edgecolor='black')
-ax.set_xlabel('Sepal Length', fontsize=12)
-ax.set_ylabel('Sepal Width', fontsize=12)
-ax.set_title('Sepal Length vs Sepal Width', fontsize=14)
-ax.grid(True, linestyle='--', alpha=0.7) #add graph lines
-ax.tick_params(axis='x',labelsize=10)
-ax.tick_params(axis='y',labelsize=10)
-fig.tight_layout()
-'''
+plt.show()
+
 
 '''
 #output a summary of each variable to a single text file 
