@@ -283,6 +283,20 @@ plt.tight_layout()
 plt.show()
 '''
 
+'''
+#Create a heatmap of the petal and sepal variables to find the correlation.
+
+#first drop the species variable
+heatmap_data = df[["sepal_length", "sepal_width", "petal_length", "petal_width"]]
+
+# Calculate the correlation matrix
+correlation = heatmap_data.corr()
+
+# Create a heatmap using seaborn
+sns.heatmap(correlation, annot=True, cmap="coolwarm")
+plt.title("Iris Petal Heatmap")
+'''
+
 
 
 

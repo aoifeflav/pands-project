@@ -27,6 +27,15 @@ The following image displays the difference between the petal and the sepal in a
 Source: Kaggle
 
 
+###Correlation of heatmap
+This heatmap shows the pairwise correlation coefficients between the numeric variables giving a clearer picure of how features are related to eachother.
+This is what the heatmap tells us about thecorrelation of variables:
+* Petal length and width are very highly correlated
+* Petal length and sepal length are also strongly correlation
+* Similarly, Petal width and Sepal Length are highly correlated.
+* The varables with the lowest correlation are Sepal width and Sepal length.
+
+
 
 
 
@@ -53,7 +62,7 @@ Aim to complete by 19/20 so there is time for final touches
 * ~~Add a boxplot chage colours to purple and explain it's significance#~~
 * Do some distplots (check the geek4geek source for how to do)
 * Add in some mathematical bits about correlation
-* Use heatmaps to explai correlation (use geeks4geeks source)
+* ~~Use heatmaps to explai correlation (use geeks4geeks source)~~
 * Insert all of the images of the plots created into the readme with a clear narrative
 
 ## Sources
@@ -77,3 +86,6 @@ https://towardsdatascience.com/create-and-customize-boxplots-with-pythons-matplo
 
 https://www.simplypsychology.org/boxplots.html
 
+https://medium.com/@hfahmida/eda-for-iris-dataset-with-boxplots-violin-plots-heatmap-pairwise-plots-535275b4c2a0#:~:text=The%20correlation%20heatmap%20shows%20the,sepal%20length%20and%20petal%20length.
+
+https://zion-oladiran.medium.com/exploratory-data-analysis-iris-dataset-68897497b120 --> another good source for explaining boxplots
