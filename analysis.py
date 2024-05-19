@@ -24,21 +24,22 @@ print(df.head())
 '''
 
 
-'''
+
 # Create a bar chart showing how many of each species there are
 #count how many of each species there are
 species_amount = df['species'].value_counts()
-
+'''
 #put it in a bar chart
 plt.figure(figsize=(10, 6)) # make it bigger
-species_amount.plot(kind = 'bar', color = ['#a32cc4', '#b65fcf', '#e39ff6'], edgecolor='black')
+species_amount.plot(kind = 'bar', color = ['#e39ff6', '#2c041c', '#710193'], edgecolor='black')
 plt.ylabel("No. of Flowers Spotted") 
 plt.xlabel("Species")
 plt.xticks(rotation=0) #straighten bottom labels
 plt.title("Amount of each Species Spotted")
 plt.gca().spines['top'].set_visible(False) #remove line a top
-plt.gca().spines['right'].set_visible(False) # reove line on right
+plt.gca().spines['right'].set_visible(False) # remove line on right
 
+plt.show()
 
 
 #make a histogram for sepal length
@@ -46,23 +47,26 @@ sepal_length = df['sepal_length']
 
 plt.figure(figsize=(10, 6)) # make it bigger
 plt.hist(sepal_length, color='#9867c5', bins=20, edgecolor='black',)
-plt.xlabel('Sepal Length')
+plt.xlabel('Sepal Length (Cm)')
 plt.ylabel('Frequency')
 plt.title('Sepal Length')
 plt.gca().spines['top'].set_visible(False) #remove line on top
 plt.gca().spines['right'].set_visible(False) #remove line on right
 
+plt.show()
 
 #sepal width
 sepal_width = df['sepal_width']
 
 plt.figure(figsize=(10, 6)) # make it bigger
 plt.hist(sepal_width, color='#be93d4', bins=20, edgecolor='black',)
-plt.xlabel('Sepal Width')
+plt.xlabel('Sepal Width (Cm)')
 plt.ylabel('Frequency')
 plt.title('Sepal Width')
 plt.gca().spines['top'].set_visible(False) #remove line on top
 plt.gca().spines['right'].set_visible(False) #remove line on right
+
+plt.show()
 
 
 #petal length
@@ -70,20 +74,20 @@ petal_length = df['petal_length']
 
 plt.figure(figsize=(10, 6)) # make it bigger
 plt.hist(petal_length, color='#311432', bins=20, edgecolor='black',)
-plt.xlabel('Petal Length')
+plt.xlabel('Petal Length (Cm)')
 plt.ylabel('Frequency')
 plt.title('Petal Length')
 plt.gca().spines['top'].set_visible(False) #remove line on top
 plt.gca().spines['right'].set_visible(False) #remove line on right
 
-
+plt.show()
 
 #petal width
 petal_width = df['petal_width']
 
 plt.figure(figsize=(10, 6)) # make it bigger
 plt.hist(petal_width, color='#7a4988', bins=20, edgecolor='black',)
-plt.xlabel('Petal Width')
+plt.xlabel('Petal Width (Cm)')
 plt.ylabel('Frequency')
 plt.title('Petal Width')
 plt.gca().spines['top'].set_visible(False) #remove line on top
@@ -99,6 +103,7 @@ pwidth = df['petal_width']
 slen = df['sepal_length']
 swidth = df['sepal_width']
 
+'''
 #1 Plot petal length vs petal width
 
 custom_colors=["#e39ff6", "#2c041c", "#710193"]
@@ -114,6 +119,7 @@ plt.grid(True)
 plt.legend()
 
 plt.show()
+
 
 #2 Plot petal length vs sepal length
 
@@ -180,7 +186,7 @@ plt.grid(True)
 plt.legend()
 
 plt.show()
-
+'''
 
 '''
 #output a summary of each variable to a single text file 
@@ -196,6 +202,7 @@ with open("variable_summary.txt", "w") as file:
         file.write(str(df[column].describe()) + "\n\n") 
 #If run multiple times this will overwrite what is already written in the file rather than create duplicates of files
 '''
+
 '''
 #Create a boxplot of the three species and their distribution
 #Exclude species
@@ -278,6 +285,5 @@ sns.heatmap(correlation, annot=True, cmap="coolwarm")
 plt.title("Iris Petal Heatmap")
 '''
 
-
-
+#distplot no longer exists cool.
 
