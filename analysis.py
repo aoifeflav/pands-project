@@ -103,10 +103,11 @@ pwidth = df['petal_width']
 slen = df['sepal_length']
 swidth = df['sepal_width']
 
+
+custom_colors=["#e39ff6", "#2c041c", "#710193"]
 '''
 #1 Plot petal length vs petal width
 
-custom_colors=["#e39ff6", "#2c041c", "#710193"]
 
 #create plot
 sns.scatterplot(x=plen, y=pwidth, hue="species", palette= custom_colors, alpha=0.7, data=df)
@@ -204,6 +205,14 @@ with open("variable_summary.txt", "w") as file:
 '''
 
 '''
+#The following plot just puts all of these together to be looked at side by side
+sns.pairplot(df, hue='species',  palette= custom_colors, height=2)
+
+plt.tight_layout()
+plt.show()
+'''
+
+'''
 #Create a boxplot of the three species and their distribution
 #Exclude species
 numerical_variables = df.columns[:-1]
@@ -258,18 +267,12 @@ graph('petal_length')
 plt.subplot(224) 
 graph('petal_width') 
   
+plt.show()
 #(reword)Species Setosa has the smallest features and less distributed with some outliers.
 #Species Versicolor has the average features.
 #Species Virginica has the highest features
 '''
 
-'''
-#The following plot just puts all of these together to be looked at side by side
-sns.pairplot(df, hue='species', height=2)
-
-plt.tight_layout()
-plt.show()
-'''
 
 '''
 #Create a heatmap of the petal and sepal variables to find the correlation.
@@ -282,8 +285,10 @@ correlation = heatmap_data.corr()
 
 # Create a heatmap using seaborn
 sns.heatmap(correlation, annot=True, cmap="coolwarm")
-plt.title("Iris Petal Heatmap")
+plt.title("Iris Flower Heatmap")
+
+plt.show()
 '''
 
-#distplot no longer exists cool.
+
 
