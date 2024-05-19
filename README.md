@@ -2,6 +2,7 @@
 ### by Aoife Flavin 
 ---
 This repository contains my analysis of the Iris dataset. The purpose of this repoitory is for my final project in the module Programming and Scripting, in Semester 1 of the Higher Diploma in Data Analytics at ATU.
+
 ---
 ## About the Iris dataset
 The Iris dataset is a very commonly used dataset in the world of data science. It has been called the "Hello World of data science". The data is also sometimes known as  Fisher's Iris data set, after the biologist and statistician Ronald Fisher used it in his 1936 paper 'The use of multiple measurements in taxonomic problems'.
@@ -74,12 +75,12 @@ This figure shows the relationship between Petal Length and Petal Width. In this
 ### Petal Length vs. Sepal Length
 ![Plot Image](plot_plen_x_slen.png)
 
-This figure shows the relationship between Petal Length and Sepal Length. Again in this plot the data is clustered by species. There is a strong positive correlation between these vaiables for the species Versicolor and Virginica. However, there does does not appear to be much correlation at all in the Setosa's. This implies that an increase in petal length does not effect the length of the sepal in the species Setosa. 
+This figure shows the relationship between Petal Length and Sepal Length. Again in this plot the data is clustered by species. There is a strong positive correlation between these variables for the species Versicolor and Virginica. However, there does does not appear to be much correlation at all in the Setosas. This implies that an increase in petal length does not effect the length of the sepal in the species Setosa. 
 
 ### Petal Length vs. Sepal Width
 ![Plot Image](plot_plen_x_swidth.png)
 
-This figure shows the relationship between Petal Length and Sepal Width. The data in this plot is more spread out than the previous, but is still separated into clustered. Similarly to the last, there does not appear to be any correlation between petal length and sepal width in the species Setosa, but there is decent positive correlation between the other two species. Interesingly, it can be observed that the sepal of the Setosa seems to be wider in general than it's counterparts, where in every other aspect it tends to be smaller.
+This figure shows the relationship between Petal Length and Sepal Width. The data in this plot is more spread out than the previous, but is still separated into clusters. Similarly to the last, there does not appear to be any correlation between petal length and sepal width in the species Setosa, but there is decent positive correlation between the other two species. Interesingly, it can be observed that the sepal of the Setosa seems to be wider in general than it's counterparts, where in every other aspect it tends to be smaller.
 
 ### Petal Width vs. Sepal Length
 ![Plot Image](plot_pwidth_x_slen.png)
@@ -89,12 +90,13 @@ This figure shows the relationship between Petal Width and Sepal Length. The dat
 ### Petal Width vs. Sepal Width
 ![Plot Image](plot_pwidth_x_swidth.png)
 
-This figure shows the relationship between Petal Width and Sepal Width. This plot has very similar characteristics to the previous one, oneof the main differences being that this plot demonstrates,once again, that Setosa's have much wider Sepals than the other species
+This figure shows the relationship between Petal Width and Sepal Width. This plot has very similar characteristics to the previous one, one of the main differences being that this plot demonstrates,once again, that Setosa's have much wider Sepals than the other species
 
 ### Comparison
 ![Plot Image](plot_alltogether.png)
 
 This plot simply displays each of the individual scatter plots in one figure to highlight the similarities and differences in correlation between each plot.
+
 ---
 
 Next I created some Box Plots to get a deeper understanding of the distribution of the data.
@@ -102,7 +104,7 @@ Next I created some Box Plots to get a deeper understanding of the distribution 
 ### Boxplot by Species
 ![Plot Image](box_by_species.png)
 
-This plot visually demonstrates that for both the Virginica and Versicolor species, there's a tendency towards longer lengths and narrower widths for both the petal and sepal. However, in the case of the Setosa species, we observe a distinct pattern: its petals the shortest and narrowest of the bunch, while the sepals are notably much wider compared to the other species. Furthermore, it can be observed that there is less variation in the sepal size of the setosa, than of the other species. The setosa also has the highest number of outliers of any of the species, demonstrated by the Os located outside the whiskers of the box plot.
+This plot visually demonstrates that for both the Virginica and Versicolor species, there's a tendency towards longer lengths and narrower widths for both the petal and sepal. However, in the case of the Setosa species, we observe a distinct pattern: its petals are the shortest and narrowest of the bunch, while the sepals are notably much wider compared to the other species. Furthermore, it can be observed that there is less variation in the sepal size of the Setosa, than of the other species. The Setosa also has the highest number of outliers of any of the species, demonstrated by the Os located outside the whiskers of the box plot.
 
 ### Boxplot by Variable
 ![Plot Image](box_by_variable.png)
@@ -132,7 +134,7 @@ For this analysis I mainly used the Pandas, Matpllotlib and Seaborn modules to i
 
 The Iris dataset is quite small, with only 150 observations so I am limited in the conclusions that I can draw from this dataset. But from my analysis I have learned:
 
-The Setosa is clearly different from the other species, notably with much wider Sepals that have little correlation with its other features. However, in all other asects the Setosa tends to be the smalest of the flowers. 
+The Setosa is clearly different from the other species, notably with much wider Sepals that have little correlation with its other features. However, in all other asects the Setosa tends to be the smallest of the flowers. 
 
 It is not as simple to separate the species Versicolor and Virginica from eachother, as there is quite a bit of overlap between these species. But in general I can conclude that the species Virginica is the largest flower in all aspects except sepal width, with Versicolor following closely behind. These variables also share a similar corelation between each of the variables.
 

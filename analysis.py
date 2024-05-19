@@ -19,18 +19,16 @@ import seaborn as sns
 df = pd.read_csv("iris.csv")
 
 
-'''
+
 #take a look
 print(df.head())
-
-'''
 
 
 
 # Create a bar chart showing how many of each species there are
 #count how many of each species there are
 species_amount = df['species'].value_counts()
-'''
+
 #put it in a bar chart
 plt.figure(figsize=(10, 6)) # make it bigger
 species_amount.plot(kind = 'bar', color = ['#e39ff6', '#2c041c', '#710193'], edgecolor='black')
@@ -41,7 +39,6 @@ plt.title("Amount of each Species Spotted")
 plt.gca().spines['top'].set_visible(False) #remove line a top
 plt.gca().spines['right'].set_visible(False) # remove line on right
 
-plt.show()
 
 
 #make a histogram for sepal length
@@ -55,7 +52,6 @@ plt.title('Sepal Length')
 plt.gca().spines['top'].set_visible(False) #remove line on top
 plt.gca().spines['right'].set_visible(False) #remove line on right
 
-plt.show()
 
 #sepal width
 sepal_width = df['sepal_width']
@@ -68,7 +64,6 @@ plt.title('Sepal Width')
 plt.gca().spines['top'].set_visible(False) #remove line on top
 plt.gca().spines['right'].set_visible(False) #remove line on right
 
-plt.show()
 
 
 #petal length
@@ -82,7 +77,6 @@ plt.title('Petal Length')
 plt.gca().spines['top'].set_visible(False) #remove line on top
 plt.gca().spines['right'].set_visible(False) #remove line on right
 
-plt.show()
 
 #petal width
 petal_width = df['petal_width']
@@ -95,9 +89,6 @@ plt.title('Petal Width')
 plt.gca().spines['top'].set_visible(False) #remove line on top
 plt.gca().spines['right'].set_visible(False) #remove line on right
 
-plt.show()
-'''
-
 
 # get the petal + sepal length and width from the data and name them as variables
 plen = df['petal_length']
@@ -107,7 +98,7 @@ swidth = df['sepal_width']
 
 
 custom_colors=["#e39ff6", "#2c041c", "#710193"]
-'''
+
 #1 Plot petal length vs petal width
 
 
@@ -150,7 +141,6 @@ plt.legend()
 
 
 
-
 #4 Plot petal width vs sepal length
 #create plot
 sns.scatterplot(x=pwidth, y=slen, hue="species", palette= custom_colors, alpha=0.7, data=df)
@@ -161,8 +151,6 @@ plt.ylabel("Sepal Length (cm)")
 plt.title("Petal Width vs Sepal Length")
 plt.grid(True)
 plt.legend()
-
-
 
 
 #5 Plot petal width vs sepal width
@@ -177,8 +165,6 @@ plt.grid(True)
 plt.legend()
 
 
-
-
 #6 Plot sepal length vs sepal width
 #create plot
 sns.scatterplot(x=slen, y=swidth, hue="species", palette= custom_colors, alpha=0.7, data=df)
@@ -190,10 +176,8 @@ plt.title("Sepal Length vs Sepal Width")
 plt.grid(True)
 plt.legend()
 
-'''
 
 
-'''
 #output a summary of each variable to a single text file 
 # Use  pandas . describe()
 #To put all of them into the same file I should use a loop
@@ -206,17 +190,15 @@ with open("variable_summary.txt", "w") as file:
         file.write(f"Summary for {column}:\n")
         file.write(str(df[column].describe()) + "\n\n") 
 #If run multiple times this will overwrite what is already written in the file rather than create duplicates of files
-'''
 
-'''
+
 #The following plot just puts all of these together to be looked at side by side
 sns.pairplot(df, hue='species',  palette= custom_colors, height=2)
 
 plt.tight_layout()
-plt.show()
-'''
 
-'''
+
+
 #Create a boxplot of the three species and their distribution
 #Exclude species
 numerical_variables = df.columns[:-1]
@@ -241,11 +223,9 @@ for i,  specie in enumerate(species, start=1):
     plt.title(specie)
 
 plt.tight_layout()
-plt.show()
 
-'''
 
-'''
+
 #define as a function
 def graph(y): 
     colours = ['#e39ff6', '#2c041c', '#710193'] 
@@ -269,10 +249,7 @@ graph('petal_width')
   
 
 
-'''
 
-
-'''
 #Create a heatmap of the petal and sepal variables to find the correlation.
 
 #first drop the species variable
@@ -284,9 +261,4 @@ correlation = heatmap_data.corr()
 # Create a heatmap using seaborn
 sns.heatmap(correlation, annot=True, cmap="coolwarm")
 plt.title("Iris Flower Heatmap")
-
-plt.show()
-'''
-
-
 
