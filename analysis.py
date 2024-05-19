@@ -18,9 +18,11 @@ import seaborn as sns
 # Load the dataset
 df = pd.read_csv("iris.csv")
 
+
 '''
 #take a look
 print(df.head())
+
 '''
 
 
