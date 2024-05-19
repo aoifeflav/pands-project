@@ -121,7 +121,6 @@ plt.title("Petal Length vs Petal Width")
 plt.grid(True)
 plt.legend()
 
-plt.show()
 
 
 #2 Plot petal length vs sepal length
@@ -136,7 +135,7 @@ plt.title("Petal Length vs Sepal Length")
 plt.grid(True)
 plt.legend()
 
-plt.show()
+
 
 #3 Plot petal length vs sepal width
 #create plot
@@ -149,7 +148,8 @@ plt.title("Petal Length vs Sepal Width")
 plt.grid(True)
 plt.legend()
 
-plt.show()
+
+
 
 #4 Plot petal width vs sepal length
 #create plot
@@ -162,7 +162,8 @@ plt.title("Petal Width vs Sepal Length")
 plt.grid(True)
 plt.legend()
 
-plt.show()
+
+
 
 #5 Plot petal width vs sepal width
 #create plot
@@ -175,7 +176,8 @@ plt.title("Petal Width vs Sepal Width")
 plt.grid(True)
 plt.legend()
 
-plt.show()
+
+
 
 #6 Plot sepal length vs sepal width
 #create plot
@@ -188,8 +190,8 @@ plt.title("Sepal Length vs Sepal Width")
 plt.grid(True)
 plt.legend()
 
-plt.show()
 '''
+
 
 '''
 #output a summary of each variable to a single text file 
@@ -240,11 +242,7 @@ for i,  specie in enumerate(species, start=1):
 
 plt.tight_layout()
 plt.show()
-#This plot visually demonstrates that for both the virginica and versicolor species, there's a tendency towards longer lengths and 
-#narrower widths for both the petal and sepal. However, in the case of the setosa species, we observe a distinct pattern: its petals are 
-#not only long but also wide, while the sepals are notably shorter in both width and length compared to the other species.
-#Furthermore, it can be observed that there is less variation in the sepal size of the setosa, than of the other species
-#The setosa also has the highest number of outliers of any of the species, demonstrated by the Os located outside the whiskers of the box plot.
+
 '''
 
 '''
@@ -269,10 +267,8 @@ graph('petal_length')
 plt.subplot(224) 
 graph('petal_width') 
   
-plt.show()
-#(reword)Species Setosa has the smallest features and less distributed with some outliers.
-#Species Versicolor has the average features.
-#Species Virginica has the highest features
+
+
 '''
 
 
